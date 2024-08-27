@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Reviews</title>
+</head>
+<body>
+    <header>
+        <h1>Add a Review</h1>
+    </header>
+    <main>
+        <form  method="POST" id="reviewForm" onsubmit="addReview(event)">
+            <div>
+            <label for="name"><strong>Company Name:</strong></label><br>
+            <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="pros"><strong>Pros:</strong></label><br>
+            <input type="text" name="pros" id="pros">
+            </div>
+            <div>
+                <label for="cons"><strong>Cons:</strong></label><br>
+            <input type="text" name="cons" id="cons">
+            </div>
+            <div>
+                <label for="rating"><strong>Rating:</strong></label><br>
+            <input type="number" name="rating" id="rating" min="1" max="5">
+            </div>
+            <div>
+                <button type="submit">Submit Review</button>
+            </div>
+        </form>
+        <h2>Search</h2>
+        <div>
+            <form onsubmit="search(event)">
+                <input type="text" name="search" id="search" placeholder="search by company name">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div id="review">
+
+        </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.5/axios.min.js" integrity="sha512-01Pe9P3mJM/4c80VuoYEGHlspKGbd9uWQe9HtdLsdTqV0CS1kz8ca44sinVEXEvlZNciMmsAjeEbm5ZxHC7yYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="index.js"></script>
+</html>
